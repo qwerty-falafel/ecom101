@@ -116,6 +116,8 @@ MIDDLEWARE = [
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
 
+WAGTAILADMIN_BASE_URL = '/cms/'
+
 AUTHENTICATION_BACKENDS = (
     'oscar.apps.customer.auth_backends.EmailBackend',
     'django.contrib.auth.backends.ModelBackend',
