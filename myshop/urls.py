@@ -20,6 +20,7 @@ from django.apps import apps
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('social/', include('social.urls')),
     path('', include('homepage.urls')),
     path('', include(apps.get_app_config('oscar').urls[0])),
 ]

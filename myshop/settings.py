@@ -41,6 +41,9 @@ INSTALLED_APPS = [
 
     'homepage',
 
+    'actstream',
+    'social.apps.SocialConfig',
+
     'django.contrib.sites',
     'django.contrib.flatpages',
 

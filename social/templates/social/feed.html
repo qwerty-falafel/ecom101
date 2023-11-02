@@ -1,0 +1,22 @@
+<!-- feed.html -->
+<h1>The Social Page</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Post</button>
+</form>
+
+<table border="1">
+    <tr>
+        <th>User</th>
+        <th>Content</th>
+        <th>Created At</th>
+    </tr>
+    {% for activity in activities %}
+    <tr>
+        <td>{{ activity.user }}</td>
+        <td>{{ activity.content }}</td>
+        <td>{{ activity.created_at }}</td>
+    </tr>
+    {% endfor %}
+</table>
