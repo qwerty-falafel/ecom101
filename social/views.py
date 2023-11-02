@@ -25,6 +25,6 @@ def news_feed(request):
     else:
         form = UserPostForm()
 
-    activities = UserProfilePost.objects.all().order_by('-created_at')
+    activities = UserProfilePost.objects.all().order_by('created_at')
     print(activities) 
     return render(request, 'social/feed.html', {'activities': activities, 'form': form})
